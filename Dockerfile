@@ -16,3 +16,5 @@ RUN curl -sL https://deb.nodesource.com/setup_${NODE_FLAVOUR} | bash - && \
 RUN npm install gitbook-cli -g
 
 USER jenkins
+
+RUN gitbook --version
