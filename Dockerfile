@@ -1,4 +1,4 @@
-FROM garethjevans/jenkinsslave-maven:v1.3.5
+FROM garethjevans/jenkinsslave-maven:v1.4.7-ubuntu
 
 ENV NODE_FLAVOUR=6.x
 
