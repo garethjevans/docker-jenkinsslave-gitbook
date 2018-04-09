@@ -13,7 +13,7 @@ RUN curl -sL https://deb.nodesource.com/setup_${NODE_FLAVOUR} | bash - && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN npm install gitbook-cli -g
+RUN npm install gitbook-cli gitbook-plugin-simple-page-toc -g
 
 USER jenkins
 
