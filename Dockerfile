@@ -9,11 +9,14 @@ RUN curl -L https://github.com/opencontrol/compliance-masonry/releases/download/
     cp compliance-masonry_1.1.2_linux_amd64/compliance-masonry /usr/local/bin
 
 RUN curl -sL https://deb.nodesource.com/setup_${NODE_FLAVOUR} | bash - && \
-    apt-get -y install nodejs calibre && \
+    apt-get update && \
+    apt-get -y install nodejs calibre python-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN npm install gitbook-cli gitbook-plugin-simple-page-toc -g
+
+RUN pip install -U mkdocs mkdocs-windmill
 
 USER jenkins
 
